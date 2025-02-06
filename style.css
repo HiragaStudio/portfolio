@@ -157,38 +157,100 @@ a {
   }
 }
 
-
 /* ============= セクション毎の余白・背景色 ============= */
-/* ヒーローセクションはそのままビジュアル重視 */
+/* --- フラクタル／ガウス風オーバーレイ共通設定 --- */
+.section-fractal {
+  position: relative;
+  overflow: hidden;
+}
+.section-fractal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.05; /* 薄い装飾 */
+  pointer-events: none;
+  z-index: 0;
+  animation: fractalAnim 12s infinite ease-in-out;
+}
+
+@keyframes fractalAnim {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.05;
+  }
+  50% {
+    transform: scale(1.05) rotate(3deg);
+    opacity: 0.08;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.05;
+  }
+}
+
+/* ヒーローセクション（背景色・画像はお好みで変更） */
 .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
   padding: 60px 0;
+  position: relative;
+  z-index: 1; /* コンテンツを前面に */
+  background-color: var(--bg-color);
+}
+.hero.section-fractal::before {
+  background-image: url('images/bg2.jpg');
 }
 
-/* ギャラリー：余白を増やし、背景色を変更 */
+/* ギャラリーセクション */
 .gallery-section {
   padding: 80px 0;
   background-color: #2a2a2a;
+  position: relative;
+  z-index: 1;
+}
+.gallery-section.section-fractal::before {
+  background-image: url('images/bg1.jpg');
 }
 
-/* ポートフォリオ：余白を増やし、背景色を変更 */
+/* ポートフォリオセクション */
 .portfolio-section {
   padding: 80px 0;
   background-color: #242424;
+  position: relative;
+  z-index: 1;
+}
+.portfolio-section.section-fractal::before {
+  background-image: url('images/bg3.jpg');
 }
 
-/* 自己紹介：余白を増やし、背景色を変更 */
+/* 自己紹介セクション */
 .about-section {
   padding: 80px 0;
   background-color: #1b1b1b;
+  position: relative;
+  z-index: 1;
+}
+.about-section.section-fractal::before {
+  background-image: url('images/bg4.jpg');
 }
 
-/* お問い合わせ：余白を増やし、背景色を変更 */
-.contact-section {
-  padding: 80px 0;
-  background-color: #202020;
+/* お問い合わせセクション（HubSpotフォーム用上書き） */
+#contact.contact-section {
+  background-color: #cdcdcd;
+  color: #111;
+  padding-top: 60px;
+  position: relative;
+  z-index: 1;
+}
+#contact.contact-section.section-fractal::before {
+  background-image: url('images/bg1.jpg');
 }
 
 /* ============= ヒーローコンテンツ ============= */
@@ -197,6 +259,8 @@ a {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
 }
 .hero-text {
   max-width: 500px;
@@ -401,7 +465,7 @@ a {
 @media (max-width: 768px) {
   .about-content {
     flex-direction: column;
-    text-align: center; /* 中央寄せにする場合 */
+    text-align: center;
   }
   .about-image,
   .about-text {
@@ -460,7 +524,6 @@ a {
 }
 .timeline li::before {
   content: none;
- 
 }
 .timeline .year {
   font-weight: bold;

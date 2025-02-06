@@ -39,7 +39,7 @@
   <!-- メインコンテンツ -->
   <main>
     <!-- ヒーローセクション -->
-    <section id="hero" class="hero fade-in">
+    <section id="hero" class="hero section-fractal fade-in">
       <div class="wrapper hero-container">
         <div class="hero-text">
           <h1>Hiraga</h1>
@@ -57,58 +57,58 @@
     </section>
     
     <!-- ギャラリーセクション -->
-    <section id="gallery" class="gallery-section fade-in">
+    <section id="gallery" class="gallery-section section-fractal fade-in">
       <div class="wrapper">
         <h2 class="section-title">フォトギャラリー</h2>
         <div class="photo-gallery">
           <div class="photo-item"><img src="images/1.jpg" alt="撮影写真1"></div>
-          <div class="photo-item"><img src="images/2.jpg" alt="撮影写真1"></div>
-          <div class="photo-item"><img src="images/3.jpg" alt="撮影写真1"></div>
-          <div class="photo-item"><img src="images/face2.jpg" alt="撮影写真1"></div>
-          <div class="photo-item"><img src="images/face2.jpg" alt="撮影写真1"></div>
+          <div class="photo-item"><img src="images/photo1.png" alt="撮影写真2"></div>
+          <div class="photo-item"><img src="images/photo2.png" alt="撮影写真3"></div>
+          <div class="photo-item"><img src="images/photo3.png" alt="撮影写真4"></div>
+          <div class="photo-item"><img src="images/photo4.jpg" alt="撮影写真5"></div>
         </div>
       </div>
     </section>
     
     <!-- ポートフォリオセクション -->
-    <section id="portfolio" class="portfolio-section fade-in">
+    <section id="portfolio" class="portfolio-section section-fractal fade-in">
       <div class="wrapper">
         <h2 class="section-title">ポートフォリオ</h2>
         <!-- フィルタボタン -->
         <div class="portfolio-filter">
           <button class="filter-btn active" data-filter="all">全て</button>
           <button class="filter-btn" data-filter="web">Web</button>
-          <button class="filter-btn" data-filter="design">デザイン</button>
-          <button class="filter-btn" data-filter="motion">モーション</button>
+          <button class="filter-btn" data-filter="branding">ブランディング</button>
+          <button class="filter-btn" data-filter="promotion">プロモーション</button>
         </div>
         <!-- プロジェクトグリッド -->
         <div class="portfolio-grid">
-          <div class="portfolio-item" data-category="web" data-title="Webプロジェクト1" data-description="これはWebプロジェクト1の詳細説明です。">
+          <div class="portfolio-item" data-category="web" data-title="Webプロジェクト" data-description="渋谷広告代理店コーポレートサイトのツール化">
             <img src="images/face2.jpg" alt="Webプロジェクト1">
             <div class="portfolio-overlay">
               <h3>Webプロジェクト1</h3>
-              <p>詳細を見る</p>
+              <p>準備中</p>
             </div>
           </div>
-          <div class="portfolio-item" data-category="design" data-title="デザインプロジェクト1" data-description="これはデザインプロジェクト1の詳細説明です。">
+          <div class="portfolio-item" data-category="video" data-title="インタビュー撮影" data-description="ハウスメーカー対談インタビュー撮影">
             <img src="images/face2.jpg" alt="デザインプロジェクト1">
             <div class="portfolio-overlay">
-              <h3>デザインプロジェクト1</h3>
-              <p>詳細を見る</p>
+              <h3>インタビュー撮影</h3>
+              <p>準備中</p>
             </div>
           </div>
-          <div class="portfolio-item" data-category="motion" data-title="モーションプロジェクト1" data-description="これはモーションプロジェクト1の詳細説明です。">
+          <div class="portfolio-item" data-category="promotion" data-title="プロモーション" data-description="有名フィットネスジムプロモーション・広告・撮影">
             <img src="images/face2.jpg" alt="モーションプロジェクト1">
             <div class="portfolio-overlay">
-              <h3>モーションプロジェクト1</h3>
-              <p>詳細を見る</p>
+              <h3>プロモーション</h3>
+              <p>準備中</p>
             </div>
           </div>
-          <div class="portfolio-item" data-category="web" data-title="Webプロジェクト2" data-description="これはWebプロジェクト2の詳細説明です。">
+          <div class="portfolio-item" data-category="branding" data-title="リクルートブランディング" data-description="インタビュー、リクルートサイト、ライティング、スチル撮影">
             <img src="images/face2.jpg" alt="Webプロジェクト2">
             <div class="portfolio-overlay">
-              <h3>Webプロジェクト2</h3>
-              <p>詳細を見る</p>
+              <h3>リクルートブランディング</h3>
+              <p>準備中</p>
             </div>
           </div>
         </div>
@@ -125,7 +125,7 @@
     </section>
     
     <!-- 自己紹介セクション -->
-    <section id="about" class="about-section fade-in">
+    <section id="about" class="about-section section-fractal fade-in">
       <div class="wrapper">
         <h2 class="section-title">自己紹介</h2>
         <div class="about-content">
@@ -133,7 +133,12 @@
             <img src="images/face3.jpg" alt="Hiragaのプロフィール写真">
           </div>
           <div class="about-text">
-            <p> 渋谷の広告代理店で取締役を務め、映像事業の立ち上げに携わってきました。業務だけでは撮影の可能性を十分に広げられないと感じ、個人活動にも注力し、常に新たなスキルの習得を目指しています。 </p> <p> これまで、住宅や商業施設のプロモーション、SNSコンテンツの撮影、イベント配信など、ロケーション撮影を中心に豊富な経験を積んできました。今後は、スタジオ撮影や小規模セットでの演出、さらに人物ポートレートにも挑戦し、幅広い表現力を磨いていきたいと考えています。また、スクリーンを活用した撮影や最新のアウトプットデバイス、配信システムの導入にも取り組むことで、将来的な事業展開にもつながる新たな映像表現を追求してまいります。 </p>
+            <p>
+              渋谷の広告代理店で取締役を務め、映像事業の立ち上げに携わってきました。業務だけでは撮影の可能性を十分に広げられないと感じ、個人活動にも注力し、常に新たなスキルの習得を目指しています。
+            </p>
+            <p>
+              これまで、インタビューや住宅・施設の撮影、広告プロモーション、SNSコンテンツの撮影、イベント配信など、ロケーション撮影を中心に豊富な経験を積んできました。今後は、スタジオ撮影や小規模セットでの演出、さらに人物ポートレートにも挑戦し、幅広い表現力を磨いていきたいと考えています。また、スクリーンを活用した撮影や最新のアウトプットデバイス、配信システムの導入にも取り組むことで、将来的な事業展開にもつながる新たな映像表現を追求してまいります。
+            </p>
           </div>
         </div>
         <!-- タブ付き詳細情報 -->
@@ -173,7 +178,8 @@
             <div class="tab-panel" role="tabpanel" aria-labelledby="tab-hobbies" id="hobbies">
               <h3>Hiragaについて</h3>
               <p>
-自身が代表や役員を務める企業がございますが、本業への影響を避けるため、事業とは一切関係のない屋号で活動していきます。作例の発表や直接のご挨拶を通じて、より多くの活動の機会を作りたいと感がえております。              </p>
+                自身が代表や役員を務める企業がございますが、本業への影響を避けるため、事業とは一切関係のない屋号で活動していきます。作例の発表や直接のご挨拶を通じて、より多くの活動の機会を作りたいと考えております。
+              </p>
             </div>
           </div>
         </div>
@@ -181,31 +187,13 @@
     </section>
     
     <!-- お問い合わせセクション -->
-    <section id="contact" class="contact-section fade-in">
+    <section id="contact" class="contact-section section-fractal fade-in">
       <div class="wrapper">
         <h2 class="section-title">お問い合わせ</h2>
-        <form id="contactForm" action="#" method="post" novalidate>
-          <div class="form-group">
-            <label for="name">お名前 <span class="required">*</span></label>
-            <input type="text" id="name" name="name" placeholder="例: 山田 太郎" required>
-          </div>
-          <div class="form-group">
-            <label for="email">メールアドレス <span class="required">*</span></label>
-            <input type="email" id="email" name="email" placeholder="example@example.com" required>
-          </div>
-          <div class="form-group">
-            <label for="subject">件名 <span class="required">*</span></label>
-            <input type="text" id="subject" name="subject" placeholder="件名を入力" required>
-          </div>
-          <div class="form-group">
-            <label for="message">メッセージ <span class="required">*</span></label>
-            <textarea id="message" name="message" rows="6" placeholder="ご質問やご要望を入力してください" required></textarea>
-          </div>
-          <div class="form-group form-buttons">
-            <button type="submit" class="btn submit-btn">送信</button>
-            <button type="reset" class="btn reset-btn">リセット</button>
-          </div>
-        </form>
+        <p>撮影依頼やご相談などお気軽にお声がけください</p>
+        <!-- HubSpot フォームの埋め込み -->
+        <script src="https://js-na2.hsforms.net/forms/embed/241923560.js" defer></script>
+        <div class="hs-form-frame" data-region="na2" data-form-id="129c8661-e9b5-4f13-8a95-df53162520cd" data-portal-id="241923560"></div>
       </div>
     </section>
   </main>
@@ -216,13 +204,6 @@
   <!-- スクリプト -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
   <script src="script.js"></script>
-  <script>
-    // お問い合わせフォームの送信シミュレーション
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert('お問い合わせありがとうございます！送信されました。');
-      this.reset();
-    });
-  </script>
+  
 </body>
 </html>

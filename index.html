@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hiraga Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+  <!-- スキップリンク -->
+  <a class="skip-link" href="#hero">コンテンツへスキップ</a>
+  
+  <!-- 共通ヘッダー -->
+  <header class="site-header">
+    <div class="wrapper header-wrapper">
+      <div class="logo">
+        <span class="logo-text">Hiraga</span>
+      </div>
+      <nav class="main-nav" aria-label="メインナビゲーション">
+        <button class="togglebtn" aria-expanded="false" aria-controls="navmenu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="visually-hidden">メニュー</span>
+        </button>
+        <ul id="navmenu" class="navlinks">
+          <li><a href="#hero">ホーム</a></li>
+          <li><a href="#gallery">ギャラリー</a></li>
+          <li><a href="#portfolio">ポートフォリオ</a></li>
+          <li><a href="#about">自己紹介</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- メインコンテンツ -->
+  <main>
+    <!-- ヒーローセクション -->
+    <section id="hero" class="hero fade-in">
+      <div class="wrapper hero-container">
+        <div class="hero-text">
+          <h1>Hiraga</h1>
+          <h2>こんにちは！私は <span class="typed-text"></span> です</h2>
+          <p>映像制作とWebデザイン、マーケティングを組み合わせたクリエイティブな挑戦を続けています。</p>
+          <div class="btn-group">
+            <a href="#portfolio" class="btn">作品を見る</a>
+            <a href="#contact" class="btn">お問い合わせ</a>
+          </div>
+        </div>
+        <div class="hero-pic">
+          <img src="images/face.jpg" alt="Hiragaのプロフィール写真">
+        </div>
+      </div>
+    </section>
+    
+    <!-- ギャラリーセクション -->
+    <section id="gallery" class="gallery-section fade-in">
+      <div class="wrapper">
+        <h2 class="section-title">フォトギャラリー</h2>
+        <div class="photo-gallery">
+          <div class="photo-item"><img src="images/1.jpg" alt="撮影写真1"></div>
+          <div class="photo-item"><img src="images/2.jpg" alt="撮影写真1"></div>
+          <div class="photo-item"><img src="images/3.jpg" alt="撮影写真1"></div>
+          <div class="photo-item"><img src="images/face2.jpg" alt="撮影写真1"></div>
+          <div class="photo-item"><img src="images/face2.jpg" alt="撮影写真1"></div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ポートフォリオセクション -->
+    <section id="portfolio" class="portfolio-section fade-in">
+      <div class="wrapper">
+        <h2 class="section-title">ポートフォリオ</h2>
+        <!-- フィルタボタン -->
+        <div class="portfolio-filter">
+          <button class="filter-btn active" data-filter="all">全て</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="design">デザイン</button>
+          <button class="filter-btn" data-filter="motion">モーション</button>
+        </div>
+        <!-- プロジェクトグリッド -->
+        <div class="portfolio-grid">
+          <div class="portfolio-item" data-category="web" data-title="Webプロジェクト1" data-description="これはWebプロジェクト1の詳細説明です。">
+            <img src="images/face2.jpg" alt="Webプロジェクト1">
+            <div class="portfolio-overlay">
+              <h3>Webプロジェクト1</h3>
+              <p>詳細を見る</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="design" data-title="デザインプロジェクト1" data-description="これはデザインプロジェクト1の詳細説明です。">
+            <img src="images/face2.jpg" alt="デザインプロジェクト1">
+            <div class="portfolio-overlay">
+              <h3>デザインプロジェクト1</h3>
+              <p>詳細を見る</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="motion" data-title="モーションプロジェクト1" data-description="これはモーションプロジェクト1の詳細説明です。">
+            <img src="images/face2.jpg" alt="モーションプロジェクト1">
+            <div class="portfolio-overlay">
+              <h3>モーションプロジェクト1</h3>
+              <p>詳細を見る</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="web" data-title="Webプロジェクト2" data-description="これはWebプロジェクト2の詳細説明です。">
+            <img src="images/face2.jpg" alt="Webプロジェクト2">
+            <div class="portfolio-overlay">
+              <h3>Webプロジェクト2</h3>
+              <p>詳細を見る</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- モーダル -->
+      <div id="portfolioModal" class="modal">
+        <div class="modal-content">
+          <span class="modal-close" aria-label="閉じる">&times;</span>
+          <img src="" alt="" class="modal-img">
+          <h3 class="modal-title"></h3>
+          <p class="modal-description"></p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- 自己紹介セクション -->
+    <section id="about" class="about-section fade-in">
+      <div class="wrapper">
+        <h2 class="section-title">自己紹介</h2>
+        <div class="about-content">
+          <div class="about-image">
+            <img src="images/face3.jpg" alt="Hiragaのプロフィール写真">
+          </div>
+          <div class="about-text">
+            <p> 渋谷の広告代理店で取締役を務め、映像事業の立ち上げに携わってきました。業務だけでは撮影の可能性を十分に広げられないと感じ、個人活動にも注力し、常に新たなスキルの習得を目指しています。 </p> <p> これまで、住宅や商業施設のプロモーション、SNSコンテンツの撮影、イベント配信など、ロケーション撮影を中心に豊富な経験を積んできました。今後は、スタジオ撮影や小規模セットでの演出、さらに人物ポートレートにも挑戦し、幅広い表現力を磨いていきたいと考えています。また、スクリーンを活用した撮影や最新のアウトプットデバイス、配信システムの導入にも取り組むことで、将来的な事業展開にもつながる新たな映像表現を追求してまいります。 </p>
+          </div>
+        </div>
+        <!-- タブ付き詳細情報 -->
+        <div class="about-details">
+          <div class="tabs" role="tablist">
+            <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="experience" id="tab-experience" data-tab="experience">経歴</button>
+            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="skills" id="tab-skills" data-tab="skills">スキル</button>
+            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="hobbies" id="tab-hobbies" data-tab="hobbies">Hiragaについて</button>
+          </div>
+          <div class="tab-content">
+            <div class="tab-panel active" role="tabpanel" aria-labelledby="tab-experience" id="experience">
+              <h3>経歴</h3>
+              <ul class="timeline">
+                <li>
+                  <span class="year">2023</span>
+                  <p>現在 - 都内広告代理店の取締役就任と映像事業の立ち上げ</p>
+                </li>
+                <li>
+                  <span class="year">2019</span>
+                  <p>スタートアップ企業の執行役兼COO就任</p>
+                </li>
+                <li>
+                  <span class="year">2018</span>
+                  <p>フリーランスとしての事業を法人化</p>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-panel" role="tabpanel" aria-labelledby="tab-skills" id="skills">
+              <h3>スキル</h3>
+              <ul class="skills-list">
+                <li><i class="fa-solid fa-code"></i> システム開発</li>
+                <li><i class="fa-solid fa-paint-brush"></i> デザイン/UX/UI</li>
+                <li><i class="fa-solid fa-video"></i> 映像制作</li>
+                <li><i class="fa-solid fa-chart-line"></i> マーケティング</li>
+              </ul>
+            </div>
+            <div class="tab-panel" role="tabpanel" aria-labelledby="tab-hobbies" id="hobbies">
+              <h3>Hiragaについて</h3>
+              <p>
+自身が代表や役員を務める企業がございますが、本業への影響を避けるため、事業とは一切関係のない屋号で活動していきます。作例の発表や直接のご挨拶を通じて、より多くの活動の機会を作りたいと感がえております。              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- お問い合わせセクション -->
+    <section id="contact" class="contact-section fade-in">
+      <div class="wrapper">
+        <h2 class="section-title">お問い合わせ</h2>
+        <form id="contactForm" action="#" method="post" novalidate>
+          <div class="form-group">
+            <label for="name">お名前 <span class="required">*</span></label>
+            <input type="text" id="name" name="name" placeholder="例: 山田 太郎" required>
+          </div>
+          <div class="form-group">
+            <label for="email">メールアドレス <span class="required">*</span></label>
+            <input type="email" id="email" name="email" placeholder="example@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="subject">件名 <span class="required">*</span></label>
+            <input type="text" id="subject" name="subject" placeholder="件名を入力" required>
+          </div>
+          <div class="form-group">
+            <label for="message">メッセージ <span class="required">*</span></label>
+            <textarea id="message" name="message" rows="6" placeholder="ご質問やご要望を入力してください" required></textarea>
+          </div>
+          <div class="form-group form-buttons">
+            <button type="submit" class="btn submit-btn">送信</button>
+            <button type="reset" class="btn reset-btn">リセット</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Back To Top ボタン -->
+  <a href="#hero" class="back-to-top">↑ Top</a>
+  
+  <!-- スクリプト -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    // お問い合わせフォームの送信シミュレーション
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('お問い合わせありがとうございます！送信されました。');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
